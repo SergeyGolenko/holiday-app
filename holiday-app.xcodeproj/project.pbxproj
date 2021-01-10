@@ -13,6 +13,7 @@
 		2C4F3F2025AA205100430AF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4F3F1E25AA205100430AF2 /* Main.storyboard */; };
 		2C4F3F2225AA205400430AF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4F3F2125AA205400430AF2 /* Assets.xcassets */; };
 		2C4F3F2525AA205400430AF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4F3F2325AA205400430AF2 /* LaunchScreen.storyboard */; };
+		2C4F3F3025AB572000430AF2 /* holiday video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2C4F3F2F25AB572000430AF2 /* holiday video.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2C4F3F2125AA205400430AF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C4F3F2425AA205400430AF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C4F3F2625AA205400430AF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C4F3F2F25AB572000430AF2 /* holiday video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "holiday video.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		2C4F3F1725AA205100430AF2 /* holiday-app */ = {
 			isa = PBXGroup;
 			children = (
+				2C4F3F2F25AB572000430AF2 /* holiday video.mp4 */,
 				2C4F3F1825AA205100430AF2 /* AppDelegate.swift */,
 				2C4F3F1A25AA205100430AF2 /* SceneDelegate.swift */,
 				2C4F3F1C25AA205100430AF2 /* ViewController.swift */,
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C4F3F2525AA205400430AF2 /* LaunchScreen.storyboard in Resources */,
+				2C4F3F3025AB572000430AF2 /* holiday video.mp4 in Resources */,
 				2C4F3F2225AA205400430AF2 /* Assets.xcassets in Resources */,
 				2C4F3F2025AA205100430AF2 /* Main.storyboard in Resources */,
 			);
