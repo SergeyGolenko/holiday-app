@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5OC-km-MCT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -39,6 +39,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="getStartedButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dfF-0v-Us7"/>
+                                                    <segue destination="wf0-lx-dNK" kind="show" id="V4g-pj-mwB"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -61,6 +62,7 @@
                             <constraint firstItem="PAh-IH-qhz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xe3-Bz-pF2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mzC-Pj-xbm"/>
                     <connections>
                         <outlet property="darkView" destination="PAh-IH-qhz" id="gED-WL-Rz5"/>
                         <outlet property="getStartedButton" destination="AX5-Vm-Mg0" id="bbj-hi-8ZU"/>
@@ -68,7 +70,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="137.94642857142856"/>
+            <point key="canvasLocation" x="368" y="-82"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YPF-yY-ryH">
+            <objects>
+                <viewController id="wf0-lx-dNK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fA9-2A-bRg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in/sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfn-YX-YQG">
+                                <rect key="frame" x="30" y="423" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gfH-5N-l98"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="T49-e4-OR2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dfn-YX-YQG" firstAttribute="leading" secondItem="T49-e4-OR2" secondAttribute="leading" constant="30" id="BC1-s7-aVE"/>
+                            <constraint firstItem="Dfn-YX-YQG" firstAttribute="centerX" secondItem="fA9-2A-bRg" secondAttribute="centerX" id="Q3M-0x-Azc"/>
+                            <constraint firstItem="T49-e4-OR2" firstAttribute="trailing" secondItem="Dfn-YX-YQG" secondAttribute="trailing" constant="30" id="VM0-ch-zuj"/>
+                            <constraint firstItem="Dfn-YX-YQG" firstAttribute="centerY" secondItem="fA9-2A-bRg" secondAttribute="centerY" id="xlM-tB-kA8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="q5n-jd-OAa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dpD-zx-q3N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="647"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LFs-Rp-u3r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5OC-km-MCT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XIY-rp-O7H">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Iqi-HQ-EcV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WD8-Uh-Thd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-409" y="342"/>
         </scene>
     </scenes>
     <resources>
