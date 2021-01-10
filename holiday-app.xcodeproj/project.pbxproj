@@ -58,7 +58,7 @@
 		2C4F3F1725AA205100430AF2 /* holiday-app */ = {
 			isa = PBXGroup;
 			children = (
-				2C4F3F2F25AB572000430AF2 /* holiday video.mp4 */,
+				2C4F3F3225AB6CEC00430AF2 /* assets */,
 				2C4F3F1825AA205100430AF2 /* AppDelegate.swift */,
 				2C4F3F1A25AA205100430AF2 /* SceneDelegate.swift */,
 				2C4F3F1C25AA205100430AF2 /* ViewController.swift */,
@@ -68,6 +68,14 @@
 				2C4F3F2625AA205400430AF2 /* Info.plist */,
 			);
 			path = "holiday-app";
+			sourceTree = "<group>";
+		};
+		2C4F3F3225AB6CEC00430AF2 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				2C4F3F2F25AB572000430AF2 /* holiday video.mp4 */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

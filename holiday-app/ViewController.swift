@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     private var playerLayer: AVPlayerLayer?
     private let notificationCenter = NotificationCenter.default
     private var appEventSubscribers = [AnyCancellable]()
+    private var count = 0
     
     
     //MARK: - IBOutlets and IBAction
@@ -43,6 +44,8 @@ class ViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated:animated)
+        removeAppEventsSubscribers()
+        removePlayer()
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -92,7 +95,6 @@ class ViewController: UIViewController {
     private func setupPlayerIfNeeded(){
         self.player = buildPlayer()
         self.playerLayer = buildPlayerLayer()
-        
         if let layer = self.playerLayer,
             view.layer.sublayers?.contains(layer) == false {
             view.layer.insertSublayer(layer, at: 0)
@@ -100,12 +102,25 @@ class ViewController: UIViewController {
     }
     
     private func  observeAppEvents(){
-        
         notificationCenter.publisher(for: .AVPlayerItemDidPlayToEndTime).sink { _ in
-          print("video has ended")
+            print("video has ended = \(self.count)")
+            self.count += 1
             self.restartVideo()
         }.store(in: &appEventSubscribers)
     }
 
+    private func  removeAppEventsSubscribers(){
+        appEventSubscribers.forEach { (subs) in
+            subs.cancel()
+        }
+    }
+    
+    private func  removePlayer(){
+        player?.pause()
+        player = nil
+        playerLayer?.removeFromSuperlayer()
+        playerLayer = nil
+        count = 0
+    }
 }
 
